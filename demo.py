@@ -31,11 +31,9 @@ driver.execute_script('document.getElementsByClassName("checkbtn")[2].click()')
 driver.find_element_by_class_name('submit').click()
 time.sleep(0.01)
 
-flag = 0
 try:
     driver.find_element_by_class_name('weui-toptips.bg-error.weui-toptips_visible')
 except:
-    flag = 1
     print('success!')
     time.sleep(3)
     driver.quit()
